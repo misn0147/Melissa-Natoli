@@ -46,9 +46,9 @@ function Nav(props) {
                                                 }
                                                 className={classNames(
                                                     props.currentPage === tab
-                                                        ? "bg-gray-900 text-white"
-                                                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                                    "px-3 py-2 rounded-md text-sm font-medium"
+                                                        ? "text-xl font-serif bg-gray-900 text-white"
+                                                        : "text-xl font-serif text-gray-300 hover:bg-gray-700 hover:text-white",
+                                                    "text-xl font-serif px-3 py-2 rounded-md text-sm font-medium"
                                                 )}
                                             >
                                                 {tab}
@@ -69,9 +69,9 @@ function Nav(props) {
                                     onClick={() => props.handlePageChange(tab)}
                                     className={classNames(
                                         props.currentPage === tab
-                                            ? "bg-gray-900 text-white"
-                                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                        "block px-3 py-2 rounded-md text-base font-medium"
+                                            ? "font-serif bg-gray-900 text-white"
+                                            : "font-serif text-gray-300 hover:bg-gray-700 hover:text-white",
+                                        "font-serif block px-3 py-2 rounded-md text-base font-medium"
                                     )}
                                 >
                                     {tab}
