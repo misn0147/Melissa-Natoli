@@ -10,15 +10,15 @@ function Nav(props) {
     }
 
     return (
-        <Disclosure as="nav" className="bg-gray-900">
+        <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
                 <>
                     <div className="max-w-full mx-auto px-2 sm:px-6 lg:px-8">
                         <div className="relative flex items-center justify-between h-16">
-                            <span className="text-3xl font-serif bg-gray-900 text-lime-50">Melissa Natoli</span>
+                            <span className="text-3xl font-serif text-lime-50">Melissa Natoli</span>
                             <div className="inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
-                                <Disclosure.Button className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-lime-50 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white focus:text-lime-50">
+                                <Disclosure.Button className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-lime-50 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white focus:text-lime-50">
                                     <span className="sr-only">
                                         Open main menu
                                     </span>
@@ -47,8 +47,8 @@ function Nav(props) {
                                                 }
                                                 className={classNames(
                                                     props.currentPage === tab
-                                                        ? "text-xl font-serif bg-gray-900 text-lime-200"
-                                                        : "text-xl font-serif text-gray-300 hover:bg-gray-700 hover:text-lime-50",
+                                                        ? "text-xl font-serif bg-gray-800 text-lime-200"
+                                                        : "text-xl font-serif text-gray-300 hover:bg-gray-900 hover:text-lime-50",
                                                     "text-xl font-serif px-3 py-2 rounded-md text-sm font-medium text-lime-50"
                                                 )}
                                             >
@@ -70,7 +70,7 @@ function Nav(props) {
                                     onClick={() => props.handlePageChange(tab)}
                                     className={classNames(
                                         props.currentPage === tab
-                                            ? "font-serif bg-gray-900 text-lime-200"
+                                            ? "font-serif bg-gray-800 text-lime-200"
                                             : "font-serif text-gray-300 hover:bg-gray-700 hover:text-lime-50",
                                         "font-serif block px-3 py-2 rounded-md text-base font-medium text-lime-50"
                                     )}

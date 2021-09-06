@@ -2,7 +2,7 @@ import { SocialIcon } from "react-social-icons";
 
 function Footer() {
     return (
-        <footer className="relative bg-gray-400">
+        <footer className="relative">
             <div className="inset-x-0 flex justify-between items-center mx-0.5 md:justify-center">
                 <div className="md:px-5">
                     <SocialIcon
