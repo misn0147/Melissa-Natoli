@@ -9,7 +9,7 @@ function Home() {
             
             <div className="bg-cover bg-center">
             <div className="responsive inset-x-0 top-20 flex justify-center items-center">
-                    <h2 className="md:text-3xl font-sans">Austin, Texas based Web Developer</h2>
+                    <h2 className="md:text-2xl font-sans text-lime-50">Austin, Texas based Web Developer</h2>
                 </div>
                 <img
                     src={austin}
