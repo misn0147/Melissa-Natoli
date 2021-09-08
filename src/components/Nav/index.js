@@ -35,7 +35,7 @@ function Nav(props) {
                                     )}
                                 </Disclosure.Button>
                             </div>
-                            <div className="hidden md:block flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                            <div className="hidden md:block mobile-menu flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                                 <div className="hidden md:block md:ml-6">
                                     <div className="flex space-x-4">
                                         {tabs.map((tab) => (

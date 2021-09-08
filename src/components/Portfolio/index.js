@@ -1,9 +1,11 @@
 import React from "react";
+
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // import Swiper core and required modules
-import SwiperCore, { Pagination, Navigation } from "swiper/core";
+import SwiperCore, {Navigation } from "swiper/core";
+
 
 //project photos
 import pourDecisions from "../../assets/pour-decisions.PNG";
@@ -15,7 +17,7 @@ import workdayPic from "../../assets/workday_scheduler.JPG";
 import bikeSleuthPic from "../../assets/BikeSleuth.JPG";
 
 // install Swiper modules
-SwiperCore.use([Pagination, Navigation]);
+SwiperCore.use([ Navigation]);
 
 function Portfolio() {
     const myWork = [
@@ -98,27 +100,24 @@ function Portfolio() {
                     slidesPerView={1}
                     spaceBetween={100}
                     loop={true}
-                    pagination={{
-                        clickable: true,
-                    }}
                     navigation={true}
                     className="mySwiper"
                     centeredSlides={true}
                 >
                     {myWork.map((project) => (
                         <SwiperSlide>
-                            <div class="max-w-95 rounded shadow-lg m-auto">
+                            <div className="max-w-95 md:max-w-3/4  rounded shadow-lg m-auto">
                                 <a
                                     href={project.link}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
                                     <div>
-                                        <div class="shadow-lg hover:shadow-xl transform transition duration-500 hover:scale-105 bg-white">
+                                        <div class="shadow-lg hover:shadow-xl transform transition duration-500 hover:scale-105 bg-white ">
                                             <img
                                                 class="w-full"
                                                 src={project.pic}
-                                                alt="Bikesleuth homepage"
+                                                alt="project homepage"
                                             />
 
                                             <div class="px-4 py-2">
@@ -148,8 +147,11 @@ function Portfolio() {
                             </div>
                         </SwiperSlide>
                     ))}
+                    <div class="swiper-pagination"  slot="pagination"></div>
                 </Swiper>
+                
             </>
+            
         </section>
     );
 }
