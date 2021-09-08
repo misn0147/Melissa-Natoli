@@ -12,20 +12,91 @@ import techBlog from "../../assets/my_tech_blog.JPG";
 import notedPic from "../../assets/Noted.JPG";
 import weatherApp from "../../assets/weather_dash.JPG";
 import workdayPic from "../../assets/workday_scheduler.JPG";
-import bikeSleuthPic from '../../assets/BikeSleuth.JPG';
+import bikeSleuthPic from "../../assets/BikeSleuth.JPG";
 
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 
 function Portfolio() {
+    const myWork = [
+        {
+            title: "BikeSleuth",
+            link: "https://bikesleuth.herokuapp.com/#/",
+            description:
+                "Bootcamp group project created to help bike owners reunite with their lost or stolen bicycles.",
+            technologies:
+                "React, GraphQL, Node.js, Tailwinds CSS, MongoDB, Mongoose, Express.js, Apollo Server, Bcrypt",
+            repo: "https://github.com/misn0147/BikeSleuth",
+            pic: bikeSleuthPic,
+        },
+        {
+            title: "Pour Decisions",
+            link: "https://pour-decisions.herokuapp.com/",
+            description:
+                "Bootcamp group project created as a review website for wineries in the Texas Hill Country.",
+            technologies:
+                "Node.js, Express.js, Handlebars.js, MySQL2, and Sequelize",
+            repo: "https://github.com/misn0147/pour-decisions",
+            pic: pourDecisions,
+        }, {
+            title: "Meal Match",
+            link: "https://misn0147.github.io/meal_match/",
+            description:
+                "Bootcamp group project created using JavaScript to randomly choose a food and drink pairing to help you have a fun and exciting date night.",
+            technologies:
+                "HTML, JavaScript, Materialize",
+            repo: "https://github.com/misn0147/meal_match",
+            pic: mealMatch,
+        }, {
+            title: "My.Tech.Blog",
+            link: "https://misn0147-my-tech-blog.herokuapp.com/",
+            description:
+                "Blog website for users to blog about tech topics. Users can interact with the blog poster through comments on the blog.",
+            technologies:
+                "JavaScript, Express.js, Handlebars.js, bcrypt, MySQL, Sequelize",
+            repo: "https://github.com/misn0147/my-tech-blog",
+            pic: techBlog,
+        }, {
+            title: "Noted",
+            link: "https://misn0147-noted.herokuapp.com/",
+            description:
+                "Note taking application created using Express.",
+            technologies:
+                "Express.js, Uuid, JavaScript",
+            repo: "https://github.com/misn0147/noted",
+            pic: notedPic,
+        }
+        , {
+            title: "Weather Dashboard",
+            link: "https://misn0147.github.io/weather-dashboard/",
+            description:
+                "Desktop weather application that uses OpenWeather API to display current weather and upcoming forecast for any city searched.",
+            technologies:
+                "JavaScript, OpenWeatherMap API, Bootstrap",
+            repo: "https://github.com/misn0147/weather-dashboard",
+            pic: weatherApp,
+        }
+        , {
+            title: "Workday Scheduler",
+            link: "https://misn0147.github.io/work-day-scheduler/",
+            description:
+                "Calendar application where user can log daily tasks and save them. The color of the task changes as the workday progresses.",
+            technologies:
+                "JavaScript, Moment.js",
+            repo: "https://github.com/misn0147/work-day-scheduler",
+            pic: workdayPic,
+        }
+    ];
     return (
         <section className="my-5">
-            <h1 className="titles">My Work</h1>
-            <hr></hr>
+            <h1 className="text-center text-xl font-serif text-lime-100">
+                My Work
+            </h1>
+            <hr className="w-2/3 h-3 mx-auto text-lime-100"></hr>
             <>
                 <Swiper
                     slidesPerView={1}
-                    spaceBetween={30}
+                    spaceBetween={100}
                     loop={true}
                     pagination={{
                         clickable: true,
@@ -34,243 +105,49 @@ function Portfolio() {
                     className="mySwiper"
                     centeredSlides={true}
                 >
-                    <SwiperSlide>
-                        <div className="card mb-3">
-                            <a
-                                href="https://bikesleuth.herokuapp.com/#/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img
-                                    className="card-img-top"
-                                    src={bikeSleuthPic}
-                                    alt="pour decisions"
-                                />
-                            </a>
-                            <div className="card-body">
-                                <h5 className="card-title">BikeSleuth</h5>
-                                <p className="card-text">
-                                    Bootcamp group project created to help bike owners reunite with their lost or stolen bicycles.
-                                    <br></br>
-                                    <u>Technologies Used</u>
-                                    <li>
-                                        React, GraphQL, Node.js, Tailwinds CSS, MongoDB, Mongoose, Express.js, Apollo Server, Bcrypt
-                                    </li>
-                                </p>
+                    {myWork.map((project) => (
+                        <SwiperSlide>
+                            <div class="max-w-95 rounded shadow-lg m-auto">
                                 <a
-                                    href="https://github.com/misn0147/BikeSleuth"
-                                    className="btn btn-secondary btn-sm"
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noreferrer"
                                 >
-                                    GitHub Repo
+                                    <div>
+                                        <div class="shadow-lg hover:shadow-xl transform transition duration-500 hover:scale-105 bg-white">
+                                            <img
+                                                class="w-full"
+                                                src={project.pic}
+                                                alt="Bikesleuth homepage"
+                                            />
+
+                                            <div class="px-4 py-2">
+                                                <h1 class="text-xl font-gray-700 font-bold">
+                                                    {project.title}
+                                                </h1>
+                                                <p class="text-sm tracking-normal">
+                                                    {project.description}
+                                                    <br></br>
+                                                    <u>Technologies Used</u>
+                                                    <li>
+                                                        {project.technologies}
+                                                    </li>
+                                                </p>
+                                                <a
+                                                    className="mt-12 w-full text-center bg-yellow-400 py-0.5 rounded"
+                                                    href={project.repo}
+                                                    rel="noreferrer"
+                                                    target="_blank"
+                                                >
+                                                    GitHub Repo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card mb-3">
-                            <a
-                                href="https://pour-decisions.herokuapp.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img
-                                    className="card-img-top"
-                                    src={pourDecisions}
-                                    alt="pour decisions"
-                                />
-                            </a>
-                            <div className="card-body">
-                                <h5 className="card-title">Pour Decisions</h5>
-                                <p className="card-text">
-                                    Bootcamp group project created as a review
-                                    website for wineries in the Texas Hill
-                                    Country.
-                                    <br></br>
-                                    <u>Technologies Used</u>
-                                    <li>
-                                        Node.js, Express.js, Handlebars.js,
-                                        MySQL2, and Sequelize
-                                    </li>
-                                </p>
-                                <a
-                                    href="https://github.com/misn0147/pour-decisions"
-                                    className="btn btn-secondary btn-sm"
-                                >
-                                    GitHub Repo
-                                </a>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card mb-3">
-                            <a
-                                href="https://misn0147.github.io/meal_match/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img
-                                    className="card-img-top"
-                                    src={mealMatch}
-                                    alt="meal match"
-                                />
-                            </a>
-                            <div className="card-body">
-                                <h5 className="card-title">Meal Match♥</h5>
-                                <p className="card-text">
-                                    Bootcamp group project created using
-                                    JavaScript to randomly choose a food and
-                                    drink pairing to help you have a fun and
-                                    exciting date night.
-                                    <br></br>
-                                    <u>Technologies Used</u>
-                                    <li>HTML, JavaScript, Materialize</li>
-                                </p>
-                                <a
-                                    href="https://github.com/misn0147/meal_match"
-                                    className="btn btn-secondary btn-sm"
-                                >
-                                    GitHub Repo
-                                </a>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card mb-3">
-                            <a
-                                href="https://misn0147-my-tech-blog.herokuapp.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img
-                                    className="card-img-top"
-                                    src={techBlog}
-                                    alt="my tech blog"
-                                />
-                            </a>
-                            <div className="card-body">
-                                <h5 className="card-title">My.Tech.Blog</h5>
-                                <p className="card-text">
-                                    Blog website for users to blog about tech
-                                    topics. Users can interact with the blog
-                                    poster through comments on the blog.
-                                    <br></br>
-                                    <u>Technologies Used</u>
-                                    <li>
-                                        JavaScript, Express.js, Handlebars.js,
-                                        bcrypt, MySQL, Sequelize
-                                    </li>
-                                </p>
-                                <a
-                                    href="https://github.com/misn0147/my-tech-blog"
-                                    className="btn btn-secondary btn-sm"
-                                >
-                                    GitHub Repo
-                                </a>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card mb-3">
-                            <a
-                                href="https://misn0147-noted.herokuapp.com/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img
-                                    className="card-img-top"
-                                    src={notedPic}
-                                    alt="noted"
-                                />
-                            </a>
-                            <div className="card-body">
-                                <h5 className="card-title">Noted</h5>
-                                <p className="card-text">
-                                    Note taking application created using
-                                    Express.
-                                    <br></br>
-                                    <u>Technologies Used</u>
-                                    <li>Express.js, Uuid, JavaScript</li>
-                                </p>
-                                <a
-                                    href="https://github.com/misn0147/noted"
-                                    className="btn btn-secondary btn-sm"
-                                >
-                                    GitHub Repo
-                                </a>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card mb-3">
-                            <a
-                                href="https://misn0147.github.io/weather-dashboard/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img
-                                    className="card-img-top"
-                                    src={weatherApp}
-                                    alt="Weather Dashboard"
-                                />
-                            </a>
-                            <div className="card-body">
-                                <h5 className="card-title">
-                                    Weather Dashboard
-                                </h5>
-                                <p className="card-text">
-                                    Desktop weather application that uses
-                                    OpenWeather API to display current weather
-                                    and upcoming forecast for any city searched.
-                                    <br></br>
-                                    <u>Technologies Used</u>
-                                    <li>
-                                        JavaScript, OpenWeatherMap API,
-                                        Bootstrap
-                                    </li>
-                                </p>
-                                <a
-                                    href="https://github.com/misn0147/weather-dashboard"
-                                    className="btn btn-secondary btn-sm"
-                                >
-                                    GitHub Repo
-                                </a>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card mb-3">
-                            <a
-                                href="https://misn0147.github.io/work-day-scheduler/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img
-                                    className="card-img-top"
-                                    src={workdayPic}
-                                    alt="Workday Scheduler"
-                                />
-                            </a>
-                            <div className="card-body">
-                                <h5 className="card-title">
-                                    Workday Scheduler
-                                </h5>
-                                <p className="card-text">
-                                    Calendar application where user can log
-                                    daily tasks and save them. The color of the
-                                    task changes as the workday progresses.
-                                    <br></br>
-                                    <u>Technologies Used</u>
-                                    <li>JavaScript, Moment.js</li>
-                                </p>
-                                <a
-                                    href="https://github.com/misn0147/work-day-scheduler"
-                                    className="btn btn-secondary btn-sm"
-                                >
-                                    GitHub Repo
-                                </a>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </>
         </section>

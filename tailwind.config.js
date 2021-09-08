@@ -16,11 +16,14 @@ module.exports = {
       gray: colors.gray,
       lime: colors.lime,
       blue: colors.blue,
-      purple: colors.purple
+      purple: colors.purple,
+      yellow: colors.yellow,
+      white: colors.white
     },
     maxWidth: {
       '3/4': '75%',
       '1/2': '50%',
+      '80': '80%',
       '95': '95%',
     },
     boxShadow: {
