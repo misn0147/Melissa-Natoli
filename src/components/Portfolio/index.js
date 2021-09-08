@@ -147,7 +147,6 @@ function Portfolio() {
                             </div>
                         </SwiperSlide>
                     ))}
-                    <div class="swiper-pagination"  slot="pagination"></div>
                 </Swiper>
                 
             </>

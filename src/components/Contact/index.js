@@ -19,8 +19,8 @@ export default function Contact() {
         // alert.success("Messege sent");
         setToSend({
             name: "",
-        message: "",
-        email: "",
+            message: "",
+            email: "",
         });
         emailjs
             .sendForm(
@@ -41,61 +41,93 @@ export default function Contact() {
 
     return (
         <section className="my-5">
-            <h1 className="titles">Contact Me</h1>
-            <hr></hr>
-            <div className="boxes">
-                <form id="contact-form" onSubmit={handleSubmit}>
-                    <div>
-                        <label htmlFor="name">Name:</label>
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="John Smith"
-                            value={toSend.name}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="email">Email address:</label>
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="john.smith@gmail.com"
-                            value={toSend.email}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="message">Message:</label>
-                        <textarea
-                            name="message"
-                            rows="5"
-                            value={toSend.message}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    {errorMessage && (
-                        <div>
-                            <p className="error-text">{errorMessage}</p>
+            <h1 className="text-center text-xl font-serif text-lime-100">
+                Contact Me
+            </h1>
+            <hr className="w-2/3 h-3 mx-auto text-lime-100"></hr>
+            <div className="shadow-box p-2 max-w-95 md:max-w-3/4 mx-auto flex-col justify-center">
+                <form class="w-full max-w-lg" onSubmit={handleSubmit}>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label
+                                class="block uppercase tracking-wide text-lime-100 text-xs font-bold mb-2"
+                                for="grid-name"
+                            >
+                                Name:
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                name= "name"
+                                type="text"
+                                placeholder="John Smith"
+                                value={toSend.name}
+                                onChange={handleChange}
+                            />
                         </div>
-                    )}
-                    <button value="Send" data-testid="button" type="submit">
-                        Submit
-                    </button>
+                        <div class="w-full md:w-1/2 px-3">
+                            <label
+                                class="block uppercase tracking-wide text-lime-100 text-xs font-bold mb-2"
+                                for="grid-email"
+                            >
+                                Email:
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                name="email"
+                                type="text"
+                                placeholder="john.smith@gmail.com"
+                                value={toSend.email}
+                                onChange={handleChange}
+                            />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label
+                                class="block uppercase tracking-wide text-lime-100 text-xs font-bold mb-2"
+                                for="grid-message"
+                            >
+                                Message:
+                            </label>
+                            <textarea
+                                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="grid-message"
+                                type="message"
+                                name="message"
+                                rows="5"
+                                value={toSend.message}
+                                onChange={handleChange}
+                            />
+                            <button
+                            className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded"
+                            value="Send"
+                            data-testid="button"
+                            type="submit"
+                        >
+                            Submit
+                        </button>
+                        </div>
+                        {errorMessage && (
+                            <div>
+                                <p className="error-text">{errorMessage}</p>
+                            </div>
+                        )}
+                    </div>
                 </form>
             </div>
 
-            <div className="boxes">
-                <h3 className="titles">Let's talk</h3>
+            <div className="shadow-box p-2 max-w-95 md:max-w-3/4 mx-auto flex-col justify-center">
+                <h3 className="text-center text-xl font-serif text-lime-100">Let's talk</h3>
                 <ul>
                     <li>
-                        <a className="contacts" href="tel:+15125895283">
+                        <a className="text-xl font-serif text-white hover:text-blue" href="tel:+15125895283">
                             512-589-5283
                         </a>
                     </li>
                     <li>
                         <a
-                            className="contacts"
+                            className="text-xl font-serif text-white hover:text-blue"
                             href="mailto:natoli.missy@gmail.com"
                         >
                             natoli.missy@gmail.com
@@ -103,7 +135,7 @@ export default function Contact() {
                     </li>
                     <li>
                         <a
-                            className="contacts"
+                            className="text-xl font-serif text-white hover:text-blue"
                             href="https://github.com/misn0147"
                             target="_blank"
                             rel="noreferrer"
