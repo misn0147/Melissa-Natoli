@@ -5,7 +5,7 @@ import myResume from "../../assets/MelissaNResume.pdf";
 function About() {
     return (
         <section className="my-5">
-            <h1 className="text-center text-xl font-serif text-lime-100">
+            <h1 className="text-center text-2xl font-serif text-lime-100">
                 About Me
             </h1>
             <hr className="w-2/3 h-3 mx-auto text-lime-100"></hr>
@@ -41,7 +41,7 @@ function About() {
             </div>
             <br></br>
             <div className="shadow-box p-2 max-w-95 md:max-w-3/4 mx-auto flex-col justify-center">
-                <h3 className="text-center text-xl font-serif text-purple-100 underline">My Technical Skills</h3>
+                <h3 className="text-center text-2xl font-serif text-lime-100 underline">My Technical Skills</h3>
                 <ul className="text-purple-100 md:mx-auto md:text-center">
                     <li>
                         <u>Programming Languages:</u> HTML, CSS, JavaScript

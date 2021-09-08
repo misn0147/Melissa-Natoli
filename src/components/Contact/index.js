@@ -41,7 +41,7 @@ export default function Contact() {
 
     return (
         <section className="my-5">
-            <h1 className="text-center text-xl font-serif text-lime-100">
+            <h1 className="text-center text-2xl font-serif text-lime-100">
                 Contact Me
             </h1>
             <hr className="w-2/3 h-3 mx-auto text-lime-100"></hr>
@@ -118,7 +118,7 @@ export default function Contact() {
             </div>
 
             <div className="shadow-box p-2 max-w-95 md:max-w-3/4 mx-auto flex-col justify-center">
-                <h3 className="text-center text-xl font-serif text-lime-100">Let's talk</h3>
+                <h3 className="text-center text-2xl font-serif text-lime-100 underline">Let's talk</h3>
                 <ul>
                     <li>
                         <a className="text-xl font-serif text-white hover:text-blue" href="tel:+15125895283">

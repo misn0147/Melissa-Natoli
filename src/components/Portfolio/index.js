@@ -91,7 +91,7 @@ function Portfolio() {
     ];
     return (
         <section className="my-5">
-            <h1 className="text-center text-xl font-serif text-lime-100">
+            <h1 className="text-center text-2xl font-serif text-lime-100">
                 My Work
             </h1>
             <hr className="w-2/3 h-3 mx-auto text-lime-100"></hr>
