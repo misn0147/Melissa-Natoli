@@ -67,7 +67,7 @@ class Game extends React.Component {
             <div className="mb-5 pb-5 pb-md-0">
                 <Instructions userScore={this.state.count} userTopScore={this.state.score} userMessage={this.state.message} />
                 
-                <div className="mb-5 pb-5 pb-md-0">
+                <div className="mb-5 pb-5 pb-md-0  m-w-3/4">
                     <Container className="mx-auto">
                         <Row >
                             <Col className="grid grid-cols-3 md:grid-cols-4 place-items-center">

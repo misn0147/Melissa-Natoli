@@ -22,7 +22,7 @@ const Instructions = (props) => {
             <h5 className={userMsg}>{props.userMessage}</h5>{" "}
             <h6 className="text-xs md:text-base text-lime-50">
                 {/* show current user score and high score */}
-                Your Score: {props.userScore || 0}  | High Score:{" "}
+                Current Score: {props.userScore || 0}  | High Score:{" "}
                 {props.userTopScore || 0}
             </h6>{" "}
             
