@@ -18,7 +18,8 @@ module.exports = {
       blue: colors.blue,
       purple: colors.purple,
       yellow: colors.yellow,
-      white: colors.white
+      white: colors.white,
+      red: colors.red,
     },
     maxWidth: {
       '3/4': '75%',
