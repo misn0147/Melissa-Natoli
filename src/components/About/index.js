@@ -34,7 +34,7 @@ function About() {
                     </ul>
                     <br></br>
                     <p>
-                        When I'm not coding, I enjoy travelling the world, playing and watching sports, practicing the ukulele, and spending time with my two little dogs - Toby and Cheesepuff.
+                        When I'm not coding, I enjoy traveling the world, playing and watching sports, practicing the ukulele, and spending time with my two little dogs - Toby and Cheesepuff.
                     </p>
                 </div>
                 </div>
@@ -52,7 +52,7 @@ function About() {
                     </li>
                     <li>
                         <u>Libraries/Frameworks:</u> jQuery, React.js,
-                        Express.js, Bootstrap, Materialize
+                        Express.js, Bootstrap, Materialize, Tailwind CSS
                     </li>
                     <li>
                         <u>Other Technologies:</u> Node.js, Passport.js,
