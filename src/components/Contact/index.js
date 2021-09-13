@@ -56,7 +56,7 @@ export default function Contact() {
                                 Name:
                             </label>
                             <input
-                                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                 name= "name"
                                 type="text"
                                 placeholder="John Smith"
