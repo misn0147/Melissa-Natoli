@@ -4,9 +4,9 @@ import { Container } from "react-bootstrap";
 const Instructions = (props) => {
     let userMsg = "text-lime-500 text-xs md:text-base"; 
     if (props.userMessage === "You guessed incorrectly! Play again?") {
-        userMsg += " text-red-500"; 
+        userMsg += " text-red-900 font-bold"; 
     } else if (props.userMessage === "You won!") {
-        userMsg += "text-lime"; 
+        userMsg += "text-lime font-bold"; 
     }
     return (
         <Container fluid className="shadow-box p-2 max-w-95 md:max-w-3/4 mx-auto flex-col justify-center text-center bg-gray-500">
