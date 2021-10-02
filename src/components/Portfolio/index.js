@@ -3,8 +3,9 @@ import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Swiper core and required modules
-import SwiperCore, { Navigation } from "swiper/core";
+import SwiperCore, { Navigation, Pagination } from "swiper/core";
 
+import '../../app.css';
 
 //project photos
 import pourDecisions from "../../assets/pour-decisions.PNG";
@@ -16,7 +17,7 @@ import workdayPic from "../../assets/workday_scheduler.JPG";
 import bikeSleuthPic from "../../assets/BikeSleuth.JPG";
 
 // install Swiper modules
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Pagination]);
 
 function Portfolio() {
     const myWork = [
@@ -100,6 +101,7 @@ function Portfolio() {
                     navigation={true}
                     className="max-w-full"
                     centeredSlides={true}
+                    pagination={{ clickable: true }}
                 >
                     {myWork.map((project) => (
                         <SwiperSlide key={project.title}>
@@ -110,7 +112,7 @@ function Portfolio() {
                                     rel="noreferrer"
                                 >
                                     <div className="rounded-t-lg">
-                                        <div className="shadow-lg hover:shadow-xl rounded-t-lg transform transition duration-500 hover:scale-105 bg-white ">
+                                        <div className="shadow-lg hover:shadow-xl rounded-t-lg transform transition duration-500 bg-white ">
                                             <img
                                                 className="w-full"
                                                 src={project.pic}
