@@ -62,12 +62,15 @@ function Nav(props) {
                     </div>
 
                     <Disclosure.Panel className="sm:hidden">
+                    {({ close }) => (
                         <div className="px-2 pt-2 pb-3 space-y-1">
                             {tabs.map((tab) => (
                                 <a
                                     key={tab}
                                     href={"#" + tab.toLowerCase()}
-                                    onClick={() => props.handlePageChange(tab)}
+                                    onClick={async () => {
+                                        await props.handlePageChange(tab)
+                                    close()}}
                                     className={classNames(
                                         props.currentPage === tab
                                             ? "font-serif bg-gray-800 text-lime-200"
@@ -79,6 +82,7 @@ function Nav(props) {
                                 </a>
                             ))}
                         </div>
+                    )}
                     </Disclosure.Panel>
                 </>
             )}

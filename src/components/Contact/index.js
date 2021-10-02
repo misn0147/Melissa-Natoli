@@ -46,17 +46,17 @@ export default function Contact() {
             </h1>
             <hr className="w-2/3 h-3 mx-auto text-lime-100"></hr>
             <div className="shadow-box p-2 max-w-95 md:max-w-3/4 mx-auto flex-col justify-center">
-                <form class="w-full max-w-lg" onSubmit={handleSubmit}>
-                    <div class="flex flex-wrap -mx-3 mb-6">
-                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <form className="w-full max-w-lg" onSubmit={handleSubmit}>
+                    <div className="flex flex-wrap -mx-3 mb-6">
+                        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                             <label
-                                class="block uppercase tracking-wide text-lime-100 text-xs font-bold mb-2"
+                                className="block uppercase tracking-wide text-lime-100 text-xs font-bold mb-2"
                                 for="grid-name"
                             >
                                 Name:
                             </label>
                             <input
-                                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                className="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                 name= "name"
                                 type="text"
                                 placeholder="John Smith"
@@ -64,15 +64,15 @@ export default function Contact() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div class="w-full md:w-1/2 px-3">
+                        <div className="w-full md:w-1/2 px-3">
                             <label
-                                class="block uppercase tracking-wide text-lime-100 text-xs font-bold mb-2"
+                                className="block uppercase tracking-wide text-lime-100 text-xs font-bold mb-2"
                                 for="grid-email"
                             >
                                 Email:
                             </label>
                             <input
-                                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                className="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 name="email"
                                 type="text"
                                 placeholder="john.smith@gmail.com"
@@ -82,16 +82,16 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap -mx-3 mb-6">
-                        <div class="w-full px-3">
+                    <div className="flex flex-wrap -mx-3 mb-6">
+                        <div className="w-full px-3">
                             <label
-                                class="block uppercase tracking-wide text-lime-100 text-xs font-bold mb-2"
+                                className="block uppercase tracking-wide text-lime-100 text-xs font-bold mb-2"
                                 for="grid-message"
                             >
                                 Message:
                             </label>
                             <textarea
-                                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                className="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 id="grid-message"
                                 type="message"
                                 name="message"
