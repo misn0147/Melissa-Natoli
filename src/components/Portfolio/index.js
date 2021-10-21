@@ -105,7 +105,7 @@ function Portfolio() {
                 >
                     {myWork.map((project) => (
                         <SwiperSlide key={project.title}>
-                            <div className="max-w-95 md:max-w-3/4 shadow-lg m-auto">
+                            <div className="max-w-95 md:max-w-1/2 shadow-lg m-auto">
                                 <a
                                     href={project.link}
                                     target="_blank"
