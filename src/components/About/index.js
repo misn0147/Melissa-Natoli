@@ -44,7 +44,7 @@ function About() {
                 <h3 className="text-center text-2xl font-serif text-lime-100 underline">My Technical Skills</h3>
                 <ul className="text-purple-100 md:mx-auto md:text-center">
                     <li>
-                        <u>Programming Languages:</u> HTML, CSS, JavaScript
+                        <u>Programming Languages:</u> Java, JavaScript, TypeScript, HTML, CSS
                     </li>
                     <li>
                         <u>Database Management:</u> MySQL, Sequelize, MongoDB,
