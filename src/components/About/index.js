@@ -1,6 +1,6 @@
 import React from "react";
 import myPhoto from "../../assets/melissa_pic.jpeg";
-import myResume from "../../assets/MelissaNResume.pdf";
+import myResume from "../../assets/MNatoliResume.pdf";
 
 function About() {
     return (
